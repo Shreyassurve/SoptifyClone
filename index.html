@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify New Releases</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Spotify New Releases</h1>
+    <p>Discover the latest albums and tracks on Spotify!</p>
+  </header>
+
+  <main>
+    <div id="themeToggleContainer">
+      <button id="themeButton" onclick="toggleTheme()">Switch to Light Theme</button>
+    </div>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search albums or artists..." oninput="filterAlbums()">
+    </div>
+
+    <div id="topChartsButtonContainer">
+      <button id="topChartsButton" onclick="loadTopCharts()">Show Top Charts</button>
+    </div>
+
+    <div id="loader" class="loader"></div>
+    <div id="songList" class="song-list"></div>
+
+    <div id="loadMoreContainer">
+      <button id="loadMoreButton" onclick="loadMoreSongs()">Load More</button>
+    </div>
+  </main>
+
+  <div id="albumModal" class="modal">
+    <div id="modalContent" class="modal-content"></div>
+  </div>
+
+  <footer>
+    <p>Powered by RapidAPI | Made with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
